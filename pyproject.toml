@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "onnx-weight-quant"
+version = "0.1.0"
+description = "Offline per-channel symmetric INT8 weight quantization for ONNX MatMul/Gemm graphs"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+runtime = ["onnxruntime"]
+test = ["pytest", "onnxruntime"]
+
+[tool.setuptools]
+packages = ["onnx_weight_quant"]
